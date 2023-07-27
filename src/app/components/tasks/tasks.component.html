@@ -1,4 +1,7 @@
 <div class="container-tasks">
+  <div *ngIf="completedTasks.length > 0; else noTasks">
+    <h1>Tasks are more than 0</h1>
+  </div>
   <div *ngFor="let task of completedTasks">
     <h2>Task</h2>
     <p>id: {{ task.id }}</p>
@@ -6,3 +9,7 @@
     <p>completed: {{ task.completed }}</p>
   </div>
 </div>
+
+<ng-template #noTasks>
+  <h1>No tasks are completed.</h1>
+</ng-template>
