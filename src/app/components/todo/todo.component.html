@@ -1,6 +1,9 @@
 <div class="todos__container">
   <h1>Todos</h1>
-  <fa-icon [icon]="faCoffee"></fa-icon>
+  <div style="color: red">
+    <fa-icon [icon]="faCoffee"></fa-icon>
+  </div>
+
   <input [(ngModel)]="inputValue" />
   <button (click)="submit()">Add</button>
   <div *ngFor="let todo of todos; let index = index">
