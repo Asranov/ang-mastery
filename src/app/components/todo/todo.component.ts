@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class TodoComponent {
   inputValue: string = ""
   todos: string[] = []
+  faCoffee = faCoffee
 
   submit() {
     this.todos.push(this.inputValue)
