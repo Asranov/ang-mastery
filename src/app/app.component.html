@@ -1,6 +1,14 @@
 <div>
   <h1>New Names:</h1>
   <ul>
-    <li *ngFor="let name of newNames; let i = index">{{ i + 1 }}.{{ name }}</li>
+    <li *ngFor="let name of newNames; let i = index">
+      {{ i + 1 }}. {{ name }}
+    </li>
   </ul>
+</div>
+
+<div>
+  <p>Total names: {{ counter }}</p>
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
 </div>
