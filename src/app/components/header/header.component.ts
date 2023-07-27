@@ -1,3 +1,4 @@
+import { Tasks } from './../../mock-tasks';
 import { Component, Input } from '@angular/core';
 
 @Component({

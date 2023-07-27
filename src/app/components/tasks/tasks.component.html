@@ -1,0 +1,8 @@
+<div class="container-tasks">
+  <div *ngFor="let task of completedTasks">
+    <h2>Task</h2>
+    <p>id: {{ task.id }}</p>
+    <p>taks: {{ task.title }}</p>
+    <p>completed: {{ task.completed }}</p>
+  </div>
+</div>
