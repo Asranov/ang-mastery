@@ -1,0 +1,8 @@
+<div class="todos__container">
+  <h1>Todos</h1>
+  <input [(ngModel)]="inputValue" />
+  <button (click)="submit()">Add</button>
+  <div *ngFor="let todo of todos; let index = index">
+    <p>{{ index + 1 }}.{{ todo }}</p>
+  </div>
+</div>
