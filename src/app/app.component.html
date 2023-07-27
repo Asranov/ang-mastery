@@ -1,1 +1,6 @@
-<h1>Hello Angular</h1>
+<div>
+  <h1>New Names:</h1>
+  <ul>
+    <li *ngFor="let name of newNames; let i = index">{{ i + 1 }}.{{ name }}</li>
+  </ul>
+</div>
