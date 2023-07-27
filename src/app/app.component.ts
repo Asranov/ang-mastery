@@ -5,6 +5,12 @@ interface User {
   age: number;
 }
 
+type Car = {
+  name: string;
+  model: string;
+  year: number;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -33,6 +39,24 @@ export class AppComponent {
     {
       name: "Bob",
       age: 23,
+    },
+  ]
+
+  cars: Car[] = [
+    {
+      name: "BMW",
+      model: "M3",
+      year: 2019,
+    },
+    {
+      name: "Audi",
+      model: "A4",
+      year: 2020,
+    },
+    {
+      name: "Mercedes",
+      model: "C200",
+      year: 2020,
     },
   ]
 

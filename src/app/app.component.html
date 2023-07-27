@@ -26,3 +26,15 @@
     <p>age: {{ user.age }}</p>
   </div>
 </div>
+
+<div>
+  <h2>Cars</h2>
+  <div *ngFor="let car of cars">
+    <p>name: {{ car.name }}</p>
+    <p>year: {{ car.year }}</p>
+    <p>model: {{ car.model }}</p>
+    <br />
+  </div>
+</div>
+
+<app-header></app-header>
