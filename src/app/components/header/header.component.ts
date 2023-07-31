@@ -1,4 +1,3 @@
-import { Tasks } from './../../mock-tasks';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -9,8 +8,13 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
   @Input() title: string = "Welcome to header";
   color = "red"
+  testCount = 0
 
-  foo() {
-    console.log(1)
+  constructor() {
+    for (let i = 0; i <= 5; i++) {
+      this.testCount++
+    }
+
+    console.log("Count:", this.testCount)
   }
 }
