@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { API_BASE_URL } from './constants/api-base-url';
 
 interface User {
   name: string;
@@ -17,6 +18,7 @@ type Car = {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  apiBaseUrl: string = API_BASE_URL
   counter: number = 0;
   names: string[] = ["Stiv", "Alice", "Bob"]
   newNames: string[] = []
