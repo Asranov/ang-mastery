@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MasteryComponent } from './components/mastery/mastery.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './components/users/users.component';
 
 
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     TasksComponent,
     TodoComponent,
     MasteryComponent,
-    TodosComponent
+    TodosComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
