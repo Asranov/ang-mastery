@@ -18,6 +18,7 @@ export class MasteryComponent {
   books: string[] = [];
   newBook: string = 'Book 4';
   animals: string[] = [];
+  count: number = 0;
 
   constructor(private bookService: BookService, private animalService: AnimalService) {
     this.books = this.bookService.getAllBooks();
@@ -28,4 +29,6 @@ export class MasteryComponent {
     this.bookService.addBook(this.newBook);
     console.log(this.books);
   }
+
+
 }

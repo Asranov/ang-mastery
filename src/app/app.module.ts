@@ -12,6 +12,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MasteryComponent } from './components/mastery/mastery.component';
+import { TodosComponent } from './components/todos/todos.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { MasteryComponent } from './components/mastery/mastery.component';
     HeaderComponent,
     TasksComponent,
     TodoComponent,
-    MasteryComponent
+    MasteryComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { MasteryComponent } from './components/mastery/mastery.component';
     FormsModule,
     FontAwesomeModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

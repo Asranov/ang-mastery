@@ -1,0 +1,7 @@
+<h1>Todos</h1>
+<div>
+  <div *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.completed" />
+    <span [ngClass]="{ completed: todo.completed }">{{ todo.title }}</span>
+  </div>
+</div>
