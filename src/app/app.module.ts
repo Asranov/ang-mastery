@@ -15,6 +15,11 @@ import { MasteryComponent } from './components/mastery/mastery.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { counterReducer } from './state/Counter/counter.reducer';
+import { CounterEffects } from './state/Counter/counter.effects';
 
 
 
@@ -26,7 +31,8 @@ import { UsersComponent } from './components/users/users.component';
     TodoComponent,
     MasteryComponent,
     TodosComponent,
-    UsersComponent
+    UsersComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { UsersComponent } from './components/users/users.component';
     FontAwesomeModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ counter: counterReducer }),
+    EffectsModule.forRoot([CounterEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]
