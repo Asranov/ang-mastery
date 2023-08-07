@@ -24,4 +24,27 @@ export class CounterComponent {
     this.store.dispatch(decrement());
   }
 
+  reset() {
+    this.count = 0
+  }
+
+  ngOnInit() {
+    console.log("ngOnInit: worked");
+  }
+
+  ngOnDestroy() {
+    console.log("ngOnDestroy: worked");
+  }
+
+  ngAfterViewInit() {
+    console.log("ngAfterViewInit: worked");
+  }
+
+  ngAfterContentInit() {
+    console.log("ngAfterContentInit: worked");
+  }
+
+  ngAfterContentChecked() {
+    console.log("ngAfterContentChecked: worked");
+  }
 }
