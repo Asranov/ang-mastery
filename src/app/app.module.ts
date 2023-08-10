@@ -1,3 +1,4 @@
+import { counterReducer } from './store/counter.reducer';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,9 @@ import { TodosComponent } from './components/todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { StoreModule } from '@ngrx/store';
+import { CounterComponent } from './components/counter/counter.component';
+import { ModeComponent } from './components/mode/mode.component';
+import { modeReducer } from './store/mode.reducer';
 
 
 @NgModule({
@@ -27,6 +31,8 @@ import { StoreModule } from '@ngrx/store';
     MasteryComponent,
     TodosComponent,
     UsersComponent,
+    CounterComponent,
+    ModeComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +43,7 @@ import { StoreModule } from '@ngrx/store';
     MatToolbarModule,
     MatButtonModule,
     HttpClientModule,
+    StoreModule.forRoot({ count: counterReducer, mode: modeReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,8 @@
+<h2>{{ mode$ | async }}</h2>
+<button (click)="change()">Change</button>
+<div *ngIf="mode$ | async; else elseBlock">
+  <p>Hello</p>
+</div>
+<ng-template #elseBlock>
+  <p>Bye</p>
+</ng-template>
