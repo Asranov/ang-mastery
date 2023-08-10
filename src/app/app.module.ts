@@ -16,8 +16,6 @@ import { TodosComponent } from './components/todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './store/counter.reducer';
-import { CounterComponent } from './counter/counter.component';
 
 
 @NgModule({
@@ -29,7 +27,6 @@ import { CounterComponent } from './counter/counter.component';
     MasteryComponent,
     TodosComponent,
     UsersComponent,
-    CounterComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +37,6 @@ import { CounterComponent } from './counter/counter.component';
     MatToolbarModule,
     MatButtonModule,
     HttpClientModule,
-    StoreModule.forRoot({ counter: counterReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent]
