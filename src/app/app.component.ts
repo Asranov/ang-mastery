@@ -62,6 +62,10 @@ export class AppComponent {
     },
   ]
 
+  handleButtonClick(): void {
+    console.log('Custom button clicked!');
+  }
+
   increment() {
     this.counter++;
     console.log(this.counter)
