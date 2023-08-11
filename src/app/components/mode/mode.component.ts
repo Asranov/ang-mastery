@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class ModeComponent {
   mode$: Observable<boolean>
+  isLoading: boolean = false
 
   constructor(private store: Store<{ mode: boolean }>) {
     this.mode$ = store.pipe(select('mode'));
@@ -17,6 +18,10 @@ export class ModeComponent {
 
   change() {
     this.store.dispatch(new ChangeMode())
+  }
+
+  toggle() {
+    this.isLoading = !this.isLoading
   }
 
 }
