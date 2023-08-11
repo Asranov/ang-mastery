@@ -1,4 +1,3 @@
-import { counterReducer } from './store/counter.reducer';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,8 +18,10 @@ import { UsersComponent } from './components/users/users.component';
 import { StoreModule } from '@ngrx/store';
 import { CounterComponent } from './components/counter/counter.component';
 import { ModeComponent } from './components/mode/mode.component';
-import { modeReducer } from './store/mode.reducer';
-
+import { EffectsModule } from '@ngrx/effects';
+import { reducers, effects } from './store/index';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { modeReducer } from './store/mode.reducer';
     UsersComponent,
     CounterComponent,
     ModeComponent,
+    TodoListComponent,
+    CustomButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,9 @@ import { modeReducer } from './store/mode.reducer';
     MatToolbarModule,
     MatButtonModule,
     HttpClientModule,
-    StoreModule.forRoot({ count: counterReducer, mode: modeReducer })
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(effects),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
