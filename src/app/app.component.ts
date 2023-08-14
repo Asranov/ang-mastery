@@ -63,18 +63,18 @@ export class AppComponent {
   ]
 
   handleButtonClick(): void {
-    console.log('Custom button clicked!');
+    // console.log('Custom button clicked!');
   }
 
   increment() {
     this.counter++;
-    console.log(this.counter)
+    // console.log(this.counter)
   }
 
 
   decrement() {
     this.counter--;
-    console.log(this.counter)
+    // console.log(this.counter)
   }
 
 
@@ -83,12 +83,12 @@ export class AppComponent {
 
     this.names.forEach((name) => this.newNames.push(name))
 
-    console.log("New names: ", this.newNames)
+    // console.log("New names: ", this.newNames)
 
-    console.log(this.filterdNumbers)
+    // console.log(this.filterdNumbers)
 
     setTimeout(() => {
-      console.log("SetTimeout worked")
+      // console.log("SetTimeout worked")
     }, 5000)
   }
 

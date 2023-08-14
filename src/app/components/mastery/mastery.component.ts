@@ -27,7 +27,7 @@ export class MasteryComponent {
 
   addBook() {
     this.bookService.addBook(this.newBook);
-    console.log(this.books);
+    // console.log(this.books);
   }
 
 

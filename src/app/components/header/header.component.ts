@@ -15,6 +15,6 @@ export class HeaderComponent {
       this.testCount++
     }
 
-    console.log("Count:", this.testCount)
+    // console.log("Count:", this.testCount)
   }
 }

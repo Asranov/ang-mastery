@@ -13,6 +13,6 @@ export class TodoComponent {
   submit() {
     this.todos.push(this.inputValue)
     this.inputValue = ""
-    console.log(this.todos)
+    // console.log(this.todos)
   }
 }
