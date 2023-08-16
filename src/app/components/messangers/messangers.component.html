@@ -1,0 +1,11 @@
+<select [(ngModel)]="selectedMessenger" (ngModelChange)="onMessengerChange()">
+  <option *ngFor="let messenger of messengers" [value]="messenger.id">
+    {{ messenger.name }}
+  </option>
+</select>
+
+<div *ngIf="selectedMessenger">
+  <h2>{{ selectedMessenger.ownerName }}</h2>
+  <p>{{ selectedMessenger.title }}</p>
+  <p>Opened Year: {{ selectedMessenger.openedYear }}</p>
+</div>

@@ -24,6 +24,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 import { TempComponent } from './components/temp/temp.component';
+import { MessangersComponent } from './components/messangers/messangers.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TempComponent } from './components/temp/temp.component';
     TodoListComponent,
     CustomButtonComponent,
     TempComponent,
+    MessangersComponent,
   ],
   imports: [
     BrowserModule,
