@@ -16,6 +16,7 @@ export class ParentComponentComponent {
     { id: '1', name: 'Info 1' },
     { id: '2', name: 'Info 2' },
     { id: '3', name: 'Info 3' },
+    { id: '4', name: 'Info 4' },
+    { id: '5', name: 'Info 5' },
   ]
-
 } 
