@@ -1,0 +1,8 @@
+<p>Child component working</p>
+<h1 style="color: red">{{ dataFromParent }}</h1>
+<p>Today's item: {{ item }}</p>
+
+<h2>Infos</h2>
+<div *ngFor="let info of infos">
+  <p>{{ info.id }}: {{ info.name }}</p>
+</div>

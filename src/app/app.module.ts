@@ -27,6 +27,8 @@ import { TempComponent } from './components/temp/temp.component';
 import { MessangersComponent } from './components/messangers/messangers.component';
 import { BooksComponent } from './components/books/books.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { ParentComponentComponent } from './components/parent-component/parent-component.component';
+import { ChildComponentComponent } from './components/child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     MessangersComponent,
     BooksComponent,
     BookDetailsComponent,
+    ParentComponentComponent,
+    ChildComponentComponent,
   ],
   imports: [
     BrowserModule,
