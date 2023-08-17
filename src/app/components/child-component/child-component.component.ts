@@ -10,4 +10,5 @@ export class ChildComponentComponent {
   @Input() dataFromParent: string = ''
   @Input() item: string = ''
   @Input() infos: IInfo[] = []
+  @Input() child: string = ''
 }

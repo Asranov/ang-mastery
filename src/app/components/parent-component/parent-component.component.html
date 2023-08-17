@@ -1,6 +1,22 @@
 <p>parent-component works!</p>
 <app-child-component
+  [child]="'Child'"
   [dataFromParent]="data"
   [item]="'hello'"
   [infos]="infos"
 ></app-child-component>
+<h1>Todos</h1>
+
+<input type="text" [(ngModel)]="value" (keyup.enter)="addTodo()" />
+<button (click)="addTodo()">Add</button>
+
+<div *ngFor="let todo of todos; let indexOfelement = index">
+  <p>
+    {{ indexOfelement + 1 }}.{{ todo }}
+    <button style="cursor: pointer" (click)="deleteTodo(indexOfelement)">
+      Delete
+    </button>
+  </p>
+</div>
+
+<br />
