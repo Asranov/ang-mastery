@@ -9,3 +9,25 @@
   <p>{{ selectedMessenger.title }}</p>
   <p>Opened Year: {{ selectedMessenger.openedYear }}</p>
 </div>
+
+<!--  -->
+
+<h2>Select a User</h2>
+<ul>
+  <li
+    *ngFor="let user of users"
+    (click)="onUserClick(user)"
+    [class.selected]="user.id === selectedUser?.id"
+  >
+    {{ user.name }}
+  </li>
+</ul>
+
+<div *ngIf="selectedUser">
+  <h2 (click)="onUserClick(selectedUser)">
+    {{ selectedUser.name }}
+  </h2>
+  <div [hidden]="!selectedUserExpanded">
+    <p>Age: {{ selectedUser.age }}</p>
+  </div>
+</div>
