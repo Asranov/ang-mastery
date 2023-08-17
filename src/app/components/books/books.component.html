@@ -1,8 +1,2 @@
 <h2>Books</h2>
 <p *ngFor="let book of books" (click)="select(book)">{{ book.name }}</p>
-
-<ul *ngIf="selectedBook">
-  <li>Name: {{ selectedBook.name }}</li>
-  <li>Author: {{ selectedBook.author }}</li>
-  <li>PublishedYear: {{ selectedBook.publishedYear }}</li>
-</ul>

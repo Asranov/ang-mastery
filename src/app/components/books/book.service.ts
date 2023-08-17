@@ -15,5 +15,9 @@ export class BookService {
     return this.books
   }
 
+  getBookById(id: string): IBook | undefined {
+    return this.books.find(book => book.id === id);
+  }
+
   constructor() { }
 }

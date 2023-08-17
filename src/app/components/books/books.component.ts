@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { BookService } from './book.service';
 
@@ -18,7 +19,7 @@ export class BooksComponent {
 
   selectedBook: IBook | undefined;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private router: Router) { }
 
   ngOnInit() {
     this.books = this.bookService.getAllBooks();
@@ -26,6 +27,7 @@ export class BooksComponent {
 
   select(book: IBook): void {
     this.selectedBook = book;
+    this.router.navigate(['/books', book.id])
     console.log(this.selectedBook);
   }
 }
