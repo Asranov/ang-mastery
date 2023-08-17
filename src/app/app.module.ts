@@ -26,7 +26,6 @@ import { CustomButtonComponent } from './components/custom-button/custom-button.
 import { TempComponent } from './components/temp/temp.component';
 import { MessangersComponent } from './components/messangers/messangers.component';
 import { BooksComponent } from './components/books/books.component';
-import { BookDetailsComponent } from './components/book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,6 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     TempComponent,
     MessangersComponent,
     BooksComponent,
-    BookDetailsComponent,
   ],
   imports: [
     BrowserModule,
