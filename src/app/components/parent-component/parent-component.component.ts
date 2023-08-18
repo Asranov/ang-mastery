@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 export interface IInfo {
   id: string;
@@ -12,6 +12,14 @@ export interface IInfo {
   styleUrls: ['./parent-component.component.css']
 })
 export class ParentComponentComponent {
+  str = "    ";
+  trimStr = this.str.trim();
+
+  ngOnInit() {
+    console.log("str:", this.str.length);
+    console.log("trimStr:", this.trimStr.length);
+  }
+
   data: string = 'Greeting from parent';
   infos: IInfo[] = [
     { id: '1', name: 'Info 1' },
@@ -19,7 +27,7 @@ export class ParentComponentComponent {
     { id: '3', name: 'Info 3' },
     { id: '4', name: 'Info 4' },
     { id: '5', name: 'Info 5' },
-  ]
+  ];
   value: string = '';
 
   todos: string[] = []
